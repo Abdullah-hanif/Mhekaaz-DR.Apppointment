@@ -8,9 +8,11 @@ import HomeVitalMonitorTap from '../../screenComponents/HomeVitalMonitorTap';
 import HomeVitalMonitorTapContent from '../../screenComponents/HomeVitalMonitorTapContent';
 import MedScheduleTap from '../../screenComponents/MedScheduleTap';
 import MedicinesMedTap from '../../screenComponents/MedicinesMedTap';
-import { AddCaretaker, FallDetection, FallDetectionHistory, HomeScreen, LoginWithEmail, MedicalReport, Medicines, MedicinesName, Notifications, PersonalInformation, PhoneVarification, ProfileOptions, ProfileType, SavedLocations, TermAndCond, VerificationOtp, VitalMonitoring, VitalMonitoringBodyTem, VitalMonitoringPulseRate } from '../../screens/Index';
+import { AddCaretaker, FallDetection, FallDetectionHistory, HomeScreen, InvitationSent, LoginWithEmail, MedicalReport, Medicines, MedicinesName, Notifications, OnBoardring, PersonalInformation, PhoneVarification, ProfileOptions, ProfileType, SavedLocations, TermAndCond, VerificationOtp, VitalMonitoring, VitalMonitoringBloodPressure, VitalMonitoringBodyTem, VitalMonitoringPulseRate, VitalMonitoringRespiratory } from '../../screens/Index';
 import Appointments from '../../screens/appointments/Appointments';
 import AuthLogin from '../../screens/authLogin/AuthLogin';
+import Connecting from '../connecting/Connecting';
+import TestReports from '../../screens/testReport/TestReports';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -20,13 +22,15 @@ const Navigation = () => {
             <Stack.Navigator screenOptions={{
                 headerShown: false,
             }}
-                initialRouteName='AuthLogin'>
+                initialRouteName='OnBoardring'>
                 <Stack.Screen name="AuthLogin" component={AuthLogin} />
                 <Stack.Screen name="LoginWithEmail" component={LoginWithEmail} />
                 <Stack.Screen name="PhoneVarification" component={PhoneVarification} />
                 <Stack.Screen name="VerificationOtp" component={VerificationOtp} />
                 <Stack.Screen name="ProfileType" component={ProfileType} />
+                <Stack.Screen name="InvitationSent" component={InvitationSent} />
                 <Stack.Screen name="PersonalInformation" component={PersonalInformation} />
+                <Stack.Screen name="Connecting" component={Connecting} />
                 <Stack.Screen name="AddCaretaker" component={AddCaretaker} />
                 <Stack.Screen name="HomeScreen" component={MyTabs} />
                 <Stack.Screen name="Medicines" component={MyTabs} />
@@ -35,13 +39,17 @@ const Navigation = () => {
                 <Stack.Screen name="VitalMonitoring" component={MyTabs} />
                 <Stack.Screen name="VitalMonitoringBodyTem" component={VitalMonitoringBodyTem} />
                 <Stack.Screen name="VitalMonitoringPulseRate" component={VitalMonitoringPulseRate} />
+                <Stack.Screen name="VitalMonitoringRespiratory" component={VitalMonitoringRespiratory} />
+                <Stack.Screen name="VitalMonitoringBloodPressure" component={VitalMonitoringBloodPressure} />
                 <Stack.Screen name="MedicalReport" component={MyTabs} />
+                <Stack.Screen name="TestReports" component={TestReports} />
                 <Stack.Screen name="ProfileOptions" component={ProfileOptions} />
                 <Stack.Screen name="FallDetection" component={FallDetection} />
                 <Stack.Screen name="FallDetectionHistory" component={FallDetectionHistory} />
                 <Stack.Screen name="SavedLocations" component={SavedLocations} />
                 <Stack.Screen name="Notifications" component={Notifications} />
                 <Stack.Screen name="TermAndCond" component={TermAndCond} />
+                <Stack.Screen name="OnBoardring" component={OnBoardring} />
                 
 
                 {/* screen components  */}

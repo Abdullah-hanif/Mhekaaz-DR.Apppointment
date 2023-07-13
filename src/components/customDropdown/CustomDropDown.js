@@ -21,7 +21,7 @@ export const CustomDropDown = () => {
     };
 
     const renderOption = ({ item }) => (
-        <TouchableOpacity onPress={() => handleOptionSelect(item.value)}>
+        <TouchableOpacity onPress={() => handleOptionSelect(item.value)} style={{backgroundColor:'white'}}>
             <Text>{item.label}</Text>
         </TouchableOpacity>
     );

@@ -16,12 +16,15 @@ import VitalMonitoringBodyTem from "./vitalMonitoring/VitalMonitoringBodyTem";
 import VitalMonitoringPulseRate from "./vitalMonitoring/VitalMonitoringPulseRate";
 import VitalMonitoringRespiratory from "./vitalMonitoring/VitalMonitoringRespiratory";
 import MedicalReport from "./medicalReport/MedicalReport";
+import TestReports from "./testReport/TestReports";
 import ProfileOptions from "./profileOptions/ProfileOptions";
 import FallDetection from "./profileOptions/FallDetection";
 import FallDetectionHistory from "./profileOptions/FallDetectionHistory";
 import SavedLocations from "./profileOptions/SavedLocations";
 import Notifications from "./profileOptions/Notifications";
 import TermAndCond from "./profileOptions/TermAndCond";
+import OnBoardring from "./onBoarding/OnBoardring";
+import InvitationSent from "./invitationSent/InvitationSent";
 
 
 
@@ -33,6 +36,7 @@ export {
     PhoneVarification,
     VerificationOtp,
     ProfileType,
+    InvitationSent ,
     PersonalInformation,
     AddCaretaker,
     HomeScreen,
@@ -45,10 +49,12 @@ export {
     VitalMonitoringPulseRate,
     VitalMonitoringRespiratory,
     MedicalReport,
+    TestReports,
     ProfileOptions,
     FallDetection,
     FallDetectionHistory,
     SavedLocations,
     Notifications,
-    TermAndCond
+    TermAndCond,
+    OnBoardring
 }

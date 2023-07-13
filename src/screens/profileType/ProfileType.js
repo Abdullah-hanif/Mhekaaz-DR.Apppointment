@@ -30,7 +30,7 @@ const ProfileType = ({ navigation }) => {
             {/* bottom buttons  */}
             <View style={styles.buttomButtonConatiner}>
 
-                <TouchableOpacity style={styles.buttomButtonInnerConatiner} onPress={() => (navigation.navigate('PersonalInformation'))}>
+                <TouchableOpacity style={styles.buttomButtonInnerConatiner} onPress={() => (navigation.navigate('InvitationSent'))}>
                     <View style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
                         <Text style={{ color: 'white', fontWeight: '600', fontSize: 18 }}>Next</Text>
                     </View>

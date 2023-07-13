@@ -4,7 +4,7 @@ import GlobalHeader from '../../components/globalHeader/GlobalHeader'
 import { Ionicons, FontAwesome, FontAwesome5 } from '@expo/vector-icons';
 
 
-const MedicalReport = () => {
+const MedicalReport = ({navigation}) => {
 
     const reportsData = [
         {
@@ -57,7 +57,7 @@ const MedicalReport = () => {
         },
     ]
     const renderItem = ({ item }) => (
-        <TouchableOpacity style={{ elevation: 1, alignItems: 'center', backgroundColor: '#fcf8f3', height: 100, padding: 5, margin: 5, borderRadius: 10, flexDirection: 'row' }}>
+        <TouchableOpacity onPress={()=>(navigation.navigate('TestReports'))} style={{ elevation: 1, alignItems: 'center', backgroundColor: '#fcf8f3', height: 100, padding: 5, margin: 5, borderRadius: 10, flexDirection: 'row' }}>
             <View style={{ left: 15 }}>
                 <Image source={require('../../assests/icons/MedIcon.png')} style={{ width: 60, height: 60, borderRadius: 5 }} />
             </View>

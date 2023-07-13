@@ -77,7 +77,8 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         color: '#d3d3d3',
         height: 40,
-        textAlignVertical: 'center'
+        textAlignVertical: 'center',
+        textAlign:'center'
     },
     activeTabText: {
         color: 'black',

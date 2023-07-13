@@ -73,15 +73,19 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     alignSelf: 'center',
     margin: 10,
-    padding: 5,
+    padding: 0,
+    borderBottomLeftRadius:10,
+    borderBottomRightRadius:10,
     flexDirection: 'column'
   },
   mainCardBoxBottom: {
     backgroundColor: '#efe7de',
-    height: '35%',
+    height: '38%',
     width: '100%',
     margin: 5,
     alignSelf: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    borderBottomLeftRadius:10,
+    borderBottomRightRadius:10,
   }
 })

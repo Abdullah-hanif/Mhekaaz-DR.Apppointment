@@ -1,16 +1,54 @@
-import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
-import React from 'react'
+import { Modal, Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import React, { useState } from 'react'
 import GlobalHeader from '../../components/globalHeader/GlobalHeader'
 import { AntDesign, FontAwesome, SimpleLineIcons, MaterialIcons, Ionicons, Foundation } from '@expo/vector-icons'
 
-const ProfileOptions = ({navigation}) => {
+
+const AlertModal = ({ visible, message, onCancel, onOK }) => {
+    return (
+        <Modal visible={visible} transparent={true} animationType="fade">
+            <View style={styles.modalContainer}>
+                <View style={styles.modalContent}>
+                    <Text style={styles.message}>{message}</Text>
+                    <View style={styles.buttonContainer}>
+                        <TouchableOpacity onPress={onOK} style={{ elevation: 2, left: 0, margin: 5, backgroundColor: '#86705d', width: 100, height: 40, alignItems: 'center', justifyContent: 'center', borderRadius: 25 }}>
+                            <Text style={{ color: 'white', fontWeight: '600' }}>Delete</Text>
+                        </TouchableOpacity>
+
+                        <TouchableOpacity onPress={onCancel} style={{ elevation: 2, left: 0, margin: 5, backgroundColor: '#efe7de', width: 100, height: 40, alignItems: 'center', justifyContent: 'center', borderRadius: 25 }}>
+                            <Text style={{ color: '#d8ccc0', fontWeight: '600' }}>Cancel</Text>
+                        </TouchableOpacity>
+                    </View>
+                </View>
+            </View>
+        </Modal>
+    );
+};
+const ProfileOptions = ({ navigation }) => {
+
+
+    const [modalVisible, setModalVisible] = useState(false);
+
+    const handleDeleteAccount = () => {
+        setModalVisible(true);
+    };
+
+    const handleCancel = () => {
+        setModalVisible(false);
+        console.log('Account deletion canceled.');
+    };
+
+    const handleOK = () => {
+        setModalVisible(false);
+        console.log('Account deleted successfully!');
+    };
     return (
         <View style={styles.main}>
             <GlobalHeader
                 LIcon={<AntDesign name="left" size={24} color="black" />}
                 Icon={<FontAwesome name="bell-o" size={24} color="black" />}
                 text={' '}
-                onPress={()=>navigation.goBack()}
+                onPress={() => navigation.goBack()}
             />
             <ScrollView style={{ flex: 1 }}>
                 <View style={{ justifyContent: 'center', alignItems: 'center' }}>
@@ -22,7 +60,7 @@ const ProfileOptions = ({navigation}) => {
                     <View style={{ elevation: 2, alignItems: 'center', backgroundColor: '#efe7de', height: 65, width: '90%', borderRadius: 10, flexDirection: 'row', justifyContent: 'space-around' }}>
                         <Text style={{ fontWeight: 'bold' }}>Fall Detection</Text>
                         <FontAwesome name="long-arrow-right" size={24} color="black" />
-                        <TouchableOpacity style={{ elevation: 3, alignItems: 'center', justifyContent: 'center', backgroundColor: '#86705d', width: 100, height: 30, borderRadius: 10 }} onPress={()=>(navigation.navigate('FallDetection'))}>
+                        <TouchableOpacity style={{ elevation: 3, alignItems: 'center', justifyContent: 'center', backgroundColor: '#86705d', width: 100, height: 30, borderRadius: 10 }} onPress={() => (navigation.navigate('FallDetection'))}>
                             <Text style={{ color: 'white', fontWeight: '600', fontSize: 14 }}>Connect</Text>
                         </TouchableOpacity>
                         <AntDesign name="mobile1" size={28} color="black" />
@@ -35,7 +73,7 @@ const ProfileOptions = ({navigation}) => {
                         <AntDesign name="right" size={24} color="black" />
 
                     </TouchableOpacity>
-                    <TouchableOpacity style={{ padding: 12, alignItems: 'center', flexDirection: 'row', justifyContent: 'space-between', elevation: 2, backgroundColor: '#f9f4ee', height: 65, width: '90%', borderRadius: 10, marginTop: 10 }} onPress={()=>navigation.navigate('SavedLocations')}>
+                    <TouchableOpacity style={{ padding: 12, alignItems: 'center', flexDirection: 'row', justifyContent: 'space-between', elevation: 2, backgroundColor: '#f9f4ee', height: 65, width: '90%', borderRadius: 10, marginTop: 10 }} onPress={() => navigation.navigate('SavedLocations')}>
                         <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                             <AntDesign name="profile" size={24} color="black" />
                             <Text style={{ left: 10, fontWeight: '600' }}>Saved locations</Text>
@@ -43,7 +81,7 @@ const ProfileOptions = ({navigation}) => {
                         <AntDesign name="right" size={24} color="black" />
 
                     </TouchableOpacity>
-                    <TouchableOpacity style={{ padding: 12, alignItems: 'center', flexDirection: 'row', justifyContent: 'space-between', elevation: 2, backgroundColor: '#f9f4ee', height: 65, width: '90%', borderRadius: 10, marginTop: 10 }} onPress={()=>(navigation.navigate('Notifications'))}>
+                    <TouchableOpacity style={{ padding: 12, alignItems: 'center', flexDirection: 'row', justifyContent: 'space-between', elevation: 2, backgroundColor: '#f9f4ee', height: 65, width: '90%', borderRadius: 10, marginTop: 10 }} onPress={() => (navigation.navigate('Notifications'))}>
                         <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                             <FontAwesome name="bell-o" size={24} color="black" />
                             <Text style={{ left: 10, fontWeight: '600' }}>Notification</Text>
@@ -59,7 +97,7 @@ const ProfileOptions = ({navigation}) => {
                         <AntDesign name="right" size={24} color="black" />
 
                     </TouchableOpacity>
-                    <TouchableOpacity style={{ padding: 12, alignItems: 'center', flexDirection: 'row', justifyContent: 'space-between', elevation: 2, backgroundColor: '#f9f4ee', height: 65, width: '90%', borderRadius: 10, marginTop: 10 }} onPress={()=>navigation.navigate('TermAndCond')}>
+                    <TouchableOpacity style={{ padding: 12, alignItems: 'center', flexDirection: 'row', justifyContent: 'space-between', elevation: 2, backgroundColor: '#f9f4ee', height: 65, width: '90%', borderRadius: 10, marginTop: 10 }} onPress={() => navigation.navigate('TermAndCond')}>
                         <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                             <Ionicons name="warning-outline" size={24} color="black" />
                             <Text style={{ left: 10, fontWeight: '600' }}>Terms & Conditions</Text>
@@ -73,15 +111,23 @@ const ProfileOptions = ({navigation}) => {
                             <Text style={{ left: 10, fontWeight: '600' }}>Share App</Text>
                         </View>
                     </TouchableOpacity>
-                    <TouchableOpacity style={{ padding: 12, alignItems: 'center', flexDirection: 'row', justifyContent: 'space-between', elevation: 2, backgroundColor: '#f9f4ee', height: 65, width: '90%', borderRadius: 10, marginTop: 10 }}>
+                    <TouchableOpacity onPress={handleDeleteAccount} style={{ padding: 12, alignItems: 'center', flexDirection: 'row', justifyContent: 'space-between', elevation: 2, backgroundColor: '#f9f4ee', height: 65, width: '90%', borderRadius: 10, marginTop: 10 }}>
                         <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                             <MaterialIcons name="highlight-remove" size={24} color="black" />
                             <Text style={{ left: 10, fontWeight: '600' }}>Delete account</Text>
                         </View>
                     </TouchableOpacity>
 
+
+                    <AlertModal
+                        visible={modalVisible}
+                        message="Do you want to delete this account?"
+                        onCancel={handleCancel}
+                        onOK={handleOK}
+                    />
+
                 </View>
-                <TouchableOpacity style={{elevation:2, left: 12, margin: 5, backgroundColor: '#86705d', width: 130, height: 40, alignItems: 'center', justifyContent: 'center', borderRadius: 5 }}>
+                <TouchableOpacity style={{ elevation: 2, left: 12, margin: 5, backgroundColor: '#86705d', width: 130, height: 40, alignItems: 'center', justifyContent: 'center', borderRadius: 5 }}>
                     <Text style={{ color: 'white', fontWeight: '600' }}>Logout</Text>
                 </TouchableOpacity>
             </ScrollView>
@@ -97,5 +143,49 @@ const styles = StyleSheet.create({
         margin: 5,
         flex: 1,
         backgroundColor: '#fffcf9'
+    },
+    button: {
+        padding: 10,
+        backgroundColor: 'red',
+        borderRadius: 5
+    },
+    buttonText: {
+        color: 'white',
+        fontWeight: 'bold'
+    },
+    modalContainer: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'rgba(0, 0, 0, 0.5)'
+    },
+    modalContent: {
+        backgroundColor: 'white',
+        padding: 20,
+        borderRadius: 10,
+        width: '80%'
+    },
+    message: {
+        fontSize: 16,
+        marginBottom: 20
+    },
+    buttonContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-around'
+    },
+    button: {
+        padding: 10,
+        borderRadius: 5,
+        marginLeft: 10
+    },
+    buttonText: {
+        color: 'white',
+        fontWeight: 'bold'
+    },
+    okButton: {
+        backgroundColor: 'green'
+    },
+    okButtonText: {
+        fontSize: 16
     }
 })

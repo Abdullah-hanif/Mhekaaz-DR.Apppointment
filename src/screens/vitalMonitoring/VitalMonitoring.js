@@ -31,12 +31,12 @@ const VitalMonitoring = ({ navigation }) => {
           </TouchableOpacity>
         </View>
         <View style={{ flexDirection: 'row' }}>
-          <TouchableOpacity style={styles.cardBox}>
+          <TouchableOpacity style={styles.cardBox} onPress={()=>(navigation.navigate('VitalMonitoringRespiratory'))}>
             <MaterialCommunityIcons name="lungs" size={24} color="black" />
             <Text style={{ fontWeight: '600', fontSize: 18 }}>Respiratory Rate</Text>
             <Text style={{ color: '#baaa9c', fontSize: 18, fontWeight: 'bold' }}>9.93</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.cardBox}>
+          <TouchableOpacity style={styles.cardBox}  onPress={()=>(navigation.navigate('VitalMonitoringBloodPressure'))}>
             <MaterialCommunityIcons name="blood-bag" size={24} color="black" />
             <Text style={{ fontWeight: '600', fontSize: 18 }}>Blood Pressure</Text>
             <Text style={{ color: '#baaa9c', fontSize: 18, fontWeight: 'bold' }}>9.93</Text>

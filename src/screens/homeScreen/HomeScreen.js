@@ -71,7 +71,7 @@ const HomeScreen = ({ navigation }) => {
       />
       {/* days selection view */}
 
-      <View style={{ marginTop: '5%', height: 130 }}>
+      <View style={{ marginTop: '5%', height: 120 }}>
         <ScrollView horizontal showsHorizontalScrollIndicator={false}>
           {days.map((day) => (
             <DaysSelectionHeader
@@ -91,7 +91,7 @@ const HomeScreen = ({ navigation }) => {
           secondView={<HomeVitalMonitorTapContent /> || <HomeVitalMonitorTap onPress={() => (navigation.navigate('HomeVitalMonitorTapContent'))} />}
           thirdView={<HomeAppoimentsTap />}
           TabOneName={'Medicines'}
-          TabTwoName={'Vital monitoring'}
+          TabTwoName={'monitoring'}
           TabThreeName={'Appointments'}
         />
 

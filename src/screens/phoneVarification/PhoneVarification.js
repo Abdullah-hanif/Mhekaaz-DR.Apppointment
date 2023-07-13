@@ -27,7 +27,7 @@ const PhoneVarification = ({ navigation }) => {
 
                     <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly' }}>
                         <TextInput
-                            style={{ height: 60, borderRadius: 360, width: '15%', textAlign: 'center', borderWidth: 0.8, top: 10 }}
+                            style={{ height: 60, borderRadius: 100, width: '18%', textAlign: 'center', borderWidth: 0.8, top: 10 }}
                             placeholder="+91"
                             value={countryCode}
                             onChangeText={handleCountryCodeChange}
