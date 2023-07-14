@@ -21,10 +21,17 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.abdullahhanif.Mekaaz"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "548ec1d8-dc89-4977-92c6-01a56b7d17a1"
+      }
+    },
+    "owner": "abdullah-hanif"
   }
 }
