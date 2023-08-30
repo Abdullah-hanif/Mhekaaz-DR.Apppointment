@@ -9,7 +9,8 @@ const AuthLogin = ({ navigation }) => {
     <View style={styles.main}>
       {/* logo  */}
       <View style={styles.logo}>
-        <Image source={require('../../assests/images/Logo.jpg')} style={{ width: '100%', height: '100%' }} />
+        <Image source={require('../../assests/images/Logo.jpg')} style={{ width: '25%', height: '60%' }} />
+        <Text style={{fontWeight:'300',fontSize:16,color:'#92979D'}}>Add email credentials</Text>
       </View>
 
       {/* Social Auth buttons  */}

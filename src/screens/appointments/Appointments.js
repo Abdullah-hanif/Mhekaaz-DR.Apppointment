@@ -5,6 +5,7 @@ import GlobalHeader from '../../components/globalHeader/GlobalHeader';
 import TopTabNavigator from '../../components/topTapNavigators/TopTabNavigator ';
 import AppointmentUpcommingTap from '../../screenComponents/AppointmentUpcommingTap';
 import AppointmentsPastTap from '../../screenComponents/AppointmentsPastTap';
+import { Image } from 'react-native';
 
 
 const Appointments = ({ navigation }) => {
@@ -56,9 +57,9 @@ const Appointments = ({ navigation }) => {
 
             {/* global header */}
             <GlobalHeader
-                LIcon={<AntDesign name="calendar" size={24} color="black" />}
+                LIcon={<Image source={require('../../assests/icons/calendar.png')} style={{width:32,height:32}}/>}
                 text={'Appointments'}
-                Icon={<FontAwesome name="bell-o" size={24} color="black" />}
+                Icon={ <Image source={require('../../assests/icons/notification.png')} style={{width:32,height:32}}/>}
             />
             {/* days selection view */}
 

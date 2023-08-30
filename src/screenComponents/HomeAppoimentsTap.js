@@ -30,7 +30,7 @@ const HomeAppoimentsTap = () => {
   const renderedItems = appoimentData.map((item) => (
     <View style={styles.mainCardBox} key={item.id}>
       <View style={{ flexDirection: 'row', left: 20, alignItems: 'center' }}>
-        <Image source={item.meetingIcon} style={{ width: 100, height: 90, borderRadius: 5 }} />
+        <Image source={item.meetingIcon} style={{ width: 80, height: 80, borderRadius: 5 }} />
         <View style={{ left: 20 }}>
           <Text style={{ fontWeight: '600', fontSize: 18 }}>{item.activityHeading}</Text>
           <Text style={{ color: '#9b8878', fontWeight: '600' }}>{item.doctorName} {item.clinicName}</Text>
@@ -40,7 +40,7 @@ const HomeAppoimentsTap = () => {
       </View>
       <View style={styles.mainCardBoxBottom}>
         <View style={{ flexDirection: 'row', left: 20 }}>
-          <MaterialCommunityIcons name="monitor-eye" size={24} color="black" />
+          <Image source={require('../assests/icons/presention-chart.png')} style={{ width: 24, height: 24, borderRadius: 5 }} />
           <Text style={{ left: 20, color: '#917d6a', fontWeight: '600', fontSize: 16 }}>{item.virtual}</Text>
         </View>
       </View>
@@ -68,24 +68,25 @@ const styles = StyleSheet.create({
     backgroundColor: '#fffcf9',
     width: '95%',
     height: 150,
-    borderWidth: 1,
+    // borderWidth: 1,
     borderColor: '#f0f0f0',
-    borderRadius: 10,
+
     alignSelf: 'center',
     margin: 10,
     padding: 0,
-    borderBottomLeftRadius:10,
-    borderBottomRightRadius:10,
-    flexDirection: 'column'
+    borderBottomLeftRadius: 0,
+    borderBottomRightRadius: 0,
+    flexDirection: 'column',
+
   },
   mainCardBoxBottom: {
     backgroundColor: '#efe7de',
-    height: '38%',
+    height: '40%',
     width: '100%',
     margin: 5,
     alignSelf: 'center',
     justifyContent: 'center',
-    borderBottomLeftRadius:10,
-    borderBottomRightRadius:10,
+    borderBottomLeftRadius: 10,
+    borderBottomRightRadius: 10,
   }
 })

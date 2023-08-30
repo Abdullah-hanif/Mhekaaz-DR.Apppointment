@@ -1,8 +1,11 @@
 import { ScrollView, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { Image } from 'react-native'
+import { TouchableOpacity } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
 
 const HomeMedcTap = () => {
+ const  navigattion = useNavigation(); 
   return (
     <View style={styles.main}>
       <ScrollView style={{ flex: 1 }}>
@@ -12,7 +15,7 @@ const HomeMedcTap = () => {
         </View>
 
         {/* morningSectionView */}
-        <View style={{ alignItems: 'center', backgroundColor: '#fcf8f3', height: 100, padding: 5, margin: 5, borderRadius: 10, flexDirection: 'row', justifyContent: 'space-around' }}>
+        <TouchableOpacity onPress={()=>navigattion.navigate('Medicines')} style={{ alignItems: 'center', backgroundColor: '#fcf8f3', height: 100, padding: 5, margin: 5, borderRadius: 10, flexDirection: 'row', justifyContent: 'space-around' }}>
           <View style={{}}>
             <Image source={require('../assests/icons/MedIcon.png')} style={{ width: 60, height: 60, borderRadius: 5 }} />
           </View>
@@ -26,7 +29,7 @@ const HomeMedcTap = () => {
           <View style={{ backgroundColor: '#86705d', height: 60, width: 60, borderRadius: 5, alignItems: 'center', justifyContent: 'center' }}>
             <Text style={{ color: '#dacfc3' }}>Taken</Text>
           </View>
-        </View>
+        </TouchableOpacity>
         <View style={{ alignItems: 'center', backgroundColor: '#fcf8f3', height: 100, padding: 5, margin: 5, borderRadius: 10, flexDirection: 'row', justifyContent: 'space-around' }}>
           <View style={{}}>
             <Image source={require('../assests/icons/MedIcon.png')} style={{ width: 60, height: 60, borderRadius: 5 }} />

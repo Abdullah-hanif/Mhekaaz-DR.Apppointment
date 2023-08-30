@@ -76,9 +76,9 @@ const MedicalReport = ({navigation}) => {
 
             {/* global header */}
             <GlobalHeader
-                LIcon={<Ionicons name="newspaper-outline" size={24} color="black" />}
+                LIcon={<Image source={require('../../assests/icons/reports.png')} style={{width:32,height:32}}/>}
                 text={'Medical report'}
-                Icon={<FontAwesome name="bell-o" size={24} color="black" />}
+                Icon={<Image source={require('../../assests/icons/notification.png')} style={{width:32,height:32}}/>  }
             />
             <View style={{ width: '100%', flexDirection: 'row', justifyContent: 'space-around', top: 10 }}>
                 <View style={{ backgroundColor: '#f8f4f1', flexDirection: 'row', width: '80%', height: 50, borderRadius: 25, alignItems: 'center', padding: 5 }}>
@@ -86,8 +86,8 @@ const MedicalReport = ({navigation}) => {
                     <TextInput placeholder='Search reports' placeholderTextColor={'#cec3ba'} style={{ left: 20 }} />
 
                 </View>
-                <TouchableOpacity style={{ backgroundColor: '#f4f1ee', height: 50, alignItems: 'center', width: '13%', justifyContent: 'center', borderRadius: 30 }}>
-                    <FontAwesome5 name="calendar-alt" size={24} color="#b6a89c" />
+                <TouchableOpacity style={{ backgroundColor: '#f4f1ee', height: 50, alignItems: 'center', width: 50, justifyContent: 'center', borderRadius: 30 }}>
+                <Image source={require('../../assests/icons/reports.png')} style={{width:25,height:25}}/>
                 </TouchableOpacity>
             </View>
             <View style={{ top: 10, padding: 5, margin: 5 }}>

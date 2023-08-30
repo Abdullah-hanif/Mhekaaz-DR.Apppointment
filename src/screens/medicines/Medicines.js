@@ -1,6 +1,6 @@
 import { FontAwesome, MaterialCommunityIcons } from '@expo/vector-icons';
 import React, { useState } from 'react';
-import { ScrollView, StyleSheet, View } from 'react-native';
+import { Image, ScrollView, StyleSheet, View } from 'react-native';
 import DaysSelectionHeader from '../../components/daysSelectionHeader/DaysSelectionHeader';
 import GlobalHeader from '../../components/globalHeader/GlobalHeader';
 import TopTabNavigator from '../../components/topTapNavigators/TopTabNavigator ';
@@ -58,13 +58,13 @@ const Medicines = ({ navigation }) => {
 
             {/* global header */}
             <GlobalHeader
-                LIcon={<MaterialCommunityIcons name="pill" size={24} color="black" />}
+                LIcon={<Image source={require('../../assests/icons/MiniMed.png')} style={{ width: 23, height: 23 }} />}
                 text={'Medicines'}
-                Icon={<FontAwesome name="bell-o" size={24} color="black" />}
+                Icon={<Image source={require('../../assests/icons/notification.png')} style={{ width: 32, height: 32 }} />}
             />
             {/* days selection view */}
 
-            <View style={{ marginTop: '5%', height: 130 }}>
+            <View style={{ marginTop: '5%', height: 110 }}>
                 <ScrollView horizontal showsHorizontalScrollIndicator={false}>
                     {days.map((day) => (
                         <DaysSelectionHeader
@@ -75,7 +75,7 @@ const Medicines = ({ navigation }) => {
                     ))}
                 </ScrollView>
             </View>
-            <ScrollView style={{ top: 10, flex: 1 }}>
+            <ScrollView style={{ top: 0, flex: 1 }}>
                 <TopTabNavigator
                     firstTap={true}
                     secondTap={true}

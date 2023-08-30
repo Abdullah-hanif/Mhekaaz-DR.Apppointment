@@ -15,9 +15,9 @@ const DaysSelectionHeader = ({ day, onPress }) => {
     return (
         // <ScrollView horizontal={true} style={{ height: '100%', width: '100%', marginTop: '5%' }}>
 
-        <TouchableOpacity style={{ borderWidth: 0.8, borderColor: 'black', padding: 5, margin: 5, flexDirection: 'column', justifyContent: 'space-around', backgroundColor: isSelected ? '#86705d' : 'white', height: '80%', width: 60, borderRadius: 50, alignItems: 'center', alignContent: 'center' }} onPress={handlePress} key={day.id}>
-            <Text style={{ alignSelf: 'center', fontWeight: '400', fontSize: 18, color: isSelected ? 'white' : 'black' }}>  {cutString(day?.day, 0, 3) ?? ''} </Text>
-            <Text style={{ alignSelf: 'center', fontWeight: '400', fontSize: 18, color: isSelected ? 'white' : 'black' }}>  {cutString(day?.date, 0, 2) ?? ''} </Text>
+        <TouchableOpacity style={{ borderWidth:isSelected ? 0 : 0.8, borderColor: isSelected ? 'transparent' :'black', padding: 5, margin: 5, flexDirection: 'column', justifyContent: 'space-around', backgroundColor: isSelected ? '#86705d' : 'white', height: 84, width: 48, borderRadius: 50, alignItems: 'center', alignContent: 'center' }} onPress={handlePress} key={day.id}>
+            <Text style={{ alignSelf: 'center', fontWeight: '800', fontSize: 13, color: isSelected ? 'white' : 'black' }}>  {cutString(day?.day, 0, 3) ?? ''} </Text>
+            <Text style={{ alignSelf: 'center', fontWeight: '800', fontSize: 13, color: isSelected ? 'white' : 'black' }}>  {cutString(day?.date, 0, 2) ?? ''} </Text>
         </TouchableOpacity>
         // </ScrollView>
     )

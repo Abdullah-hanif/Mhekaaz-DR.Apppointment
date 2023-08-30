@@ -46,7 +46,7 @@ const ProfileOptions = ({ navigation }) => {
         <View style={styles.main}>
             <GlobalHeader
                 LIcon={<AntDesign name="left" size={24} color="black" />}
-                Icon={<FontAwesome name="bell-o" size={24} color="black" />}
+                Icon={<Image source={require('../../assests/icons/notification.png')} style={{width:32,height:32}}/>}
                 text={' '}
                 onPress={() => navigation.goBack()}
             />
@@ -54,7 +54,7 @@ const ProfileOptions = ({ navigation }) => {
                 <View style={{ justifyContent: 'center', alignItems: 'center' }}>
                     <Image source={require('../../assests/images/UserImg.jpg')} style={{ width: 130, height: 130, borderRadius: 360 }} />
                     <Text style={{ fontSize: 18, fontWeight: 'bold', marginTop: 10 }}>Akif khan</Text>
-                    <Text style={{ color: '#c2c3c6' }}>Akif akif.abdullah.aa32@gmail.com</Text>
+                    <Text style={{ color: '#c2c3c6' }}>akif.abdullah.aa32@gmail.com</Text>
                 </View>
                 <View style={{ alignItems: 'center', paddingVertical: 10, }}>
                     <View style={{ elevation: 2, alignItems: 'center', backgroundColor: '#efe7de', height: 65, width: '90%', borderRadius: 10, flexDirection: 'row', justifyContent: 'space-around' }}>
@@ -63,58 +63,58 @@ const ProfileOptions = ({ navigation }) => {
                         <TouchableOpacity style={{ elevation: 3, alignItems: 'center', justifyContent: 'center', backgroundColor: '#86705d', width: 100, height: 30, borderRadius: 10 }} onPress={() => (navigation.navigate('FallDetection'))}>
                             <Text style={{ color: 'white', fontWeight: '600', fontSize: 14 }}>Connect</Text>
                         </TouchableOpacity>
-                        <AntDesign name="mobile1" size={28} color="black" />
+                        <Image source={require('../../assests/icons/gyroscope.png')} style={{width:30,height:48}}/>
                     </View  >
                     <TouchableOpacity style={{ padding: 12, alignItems: 'center', flexDirection: 'row', justifyContent: 'space-between', elevation: 2, backgroundColor: '#f9f4ee', height: 65, width: '90%', borderRadius: 10, marginTop: 10 }}>
                         <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                            <SimpleLineIcons name="user" size={24} color="black" />
-                            <Text style={{ left: 10, fontWeight: '600' }}>Account information</Text>
+                        <Image source={require('../../assests/icons/user-edit.png')} style={{width:24,height:24}}/>
+                            <Text style={{ left: 10, fontWeight: '500',fontSize:16 }}>Account information</Text>
                         </View>
                         <AntDesign name="right" size={24} color="black" />
 
                     </TouchableOpacity>
                     <TouchableOpacity style={{ padding: 12, alignItems: 'center', flexDirection: 'row', justifyContent: 'space-between', elevation: 2, backgroundColor: '#f9f4ee', height: 65, width: '90%', borderRadius: 10, marginTop: 10 }} onPress={() => navigation.navigate('SavedLocations')}>
                         <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                            <AntDesign name="profile" size={24} color="black" />
-                            <Text style={{ left: 10, fontWeight: '600' }}>Saved locations</Text>
+                        <Image source={require('../../assests/icons/map.png')} style={{width:24,height:24}}/>
+                            <Text style={{ left: 10, fontWeight: '500',fontSize:16}}>locations</Text>
                         </View>
                         <AntDesign name="right" size={24} color="black" />
 
                     </TouchableOpacity>
                     <TouchableOpacity style={{ padding: 12, alignItems: 'center', flexDirection: 'row', justifyContent: 'space-between', elevation: 2, backgroundColor: '#f9f4ee', height: 65, width: '90%', borderRadius: 10, marginTop: 10 }} onPress={() => (navigation.navigate('Notifications'))}>
                         <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                            <FontAwesome name="bell-o" size={24} color="black" />
-                            <Text style={{ left: 10, fontWeight: '600' }}>Notification</Text>
+                        <Image source={require('../../assests/icons/notification-bing.png')} style={{width:24,height:24}}/>
+                            <Text style={{ left: 10, fontWeight: '500',fontSize:16}}>Notification</Text>
                         </View>
                         <AntDesign name="right" size={24} color="black" />
 
                     </TouchableOpacity>
                     <TouchableOpacity style={{ padding: 12, alignItems: 'center', flexDirection: 'row', justifyContent: 'space-between', elevation: 2, backgroundColor: '#f9f4ee', height: 65, width: '90%', borderRadius: 10, marginTop: 10 }}>
                         <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                            <MaterialIcons name="privacy-tip" size={24} color="black" />
-                            <Text style={{ left: 10, fontWeight: '600' }}>Privacy & Policy</Text>
+                        <Image source={require('../../assests/icons/security-safe.png')} style={{width:24,height:24}}/>
+                            <Text style={{ left: 10, fontWeight: '500',fontSize:16}}>Privacy & Policy</Text>
                         </View>
                         <AntDesign name="right" size={24} color="black" />
 
                     </TouchableOpacity>
                     <TouchableOpacity style={{ padding: 12, alignItems: 'center', flexDirection: 'row', justifyContent: 'space-between', elevation: 2, backgroundColor: '#f9f4ee', height: 65, width: '90%', borderRadius: 10, marginTop: 10 }} onPress={() => navigation.navigate('TermAndCond')}>
                         <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                            <Ionicons name="warning-outline" size={24} color="black" />
-                            <Text style={{ left: 10, fontWeight: '600' }}>Terms & Conditions</Text>
+                        <Image source={require('../../assests/icons/warning-2.png')} style={{width:24,height:24}}/>
+                            <Text style={{ left: 10, fontWeight: '500',fontSize:16}}>Terms & Conditions</Text>
                         </View>
                         <AntDesign name="right" size={24} color="black" />
 
                     </TouchableOpacity>
                     <TouchableOpacity style={{ padding: 12, alignItems: 'center', flexDirection: 'row', justifyContent: 'space-between', elevation: 2, backgroundColor: '#f9f4ee', height: 65, width: '90%', borderRadius: 10, marginTop: 10 }}>
                         <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                            <Foundation name="share" size={24} color="black" />
-                            <Text style={{ left: 10, fontWeight: '600' }}>Share App</Text>
+                        <Image source={require('../../assests/icons/share.png')} style={{width:24,height:24}}/>
+                            <Text style={{ left: 10, fontWeight: '500',fontSize:16}}>Share App</Text>
                         </View>
                     </TouchableOpacity>
                     <TouchableOpacity onPress={handleDeleteAccount} style={{ padding: 12, alignItems: 'center', flexDirection: 'row', justifyContent: 'space-between', elevation: 2, backgroundColor: '#f9f4ee', height: 65, width: '90%', borderRadius: 10, marginTop: 10 }}>
                         <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                            <MaterialIcons name="highlight-remove" size={24} color="black" />
-                            <Text style={{ left: 10, fontWeight: '600' }}>Delete account</Text>
+                        <Image source={require('../../assests/icons/delete-account.png')} style={{width:24,height:24}}/>
+                            <Text style={{ left: 10, fontWeight: '500',fontSize:16}}>Delete account</Text>
                         </View>
                     </TouchableOpacity>
 

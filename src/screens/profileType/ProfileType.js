@@ -16,13 +16,14 @@ const ProfileType = ({ navigation }) => {
             <View style={{ left: 10 }}>
                 <Text style={{ color: 'grey' }}>Select the profile type</Text>
             </View>
-            <View style={{ height: '30%', flexDirection: 'row', justifyContent: 'space-around', top: '10%' }}>
-                <TouchableOpacity style={{ width: '45%', height: '100%', backgroundColor: '#ffff', padding: 8, alignItems: 'center', borderWidth: 1, borderColor: 'grey', borderRadius: 10 }}>
-                    <Image source={require('../../assests/icons/patinet.png')} style={{ height: '70%', width: '100%', top: 5 }} />
+            <View style={{ height: '30%', flexDirection: 'row', justifyContent: 'space-around', top: '10%', }}>
+                <TouchableOpacity style={{justifyContent:'center', width: '45%', height: '100%', backgroundColor: '#ffff', padding: 8, alignItems: 'center', borderWidth: 1, borderColor: 'grey', borderRadius: 10 }}>
+                    <Image source={require('../../assests/icons/patinet.png')} style={{ }} />
                     <Text style={{ color: 'black', fontWeight: '400', marginTop: '15%', fontSize: 18 }}>Patient</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={{ width: '45%', height: '100%', backgroundColor: '#fff', padding: 8, alignItems: 'center', borderWidth: 1, borderColor: 'grey', borderRadius: 10 }}>
-                    <Image source={require('../../assests/icons/caretaker.png')} style={{ height: '70%', width: '100%', top: 5 }} />
+                <TouchableOpacity style={{justifyContent:'center', width: '45%', height: '100%', backgroundColor: '#fff', padding: 8, alignItems: 'center', borderWidth: 1, borderColor: 'grey', borderRadius: 10 }}>
+                    
+                    <Image source={require('../../assests/icons/caretaker.png')} style={{ }} />
                     <Text style={{ color: 'black', fontWeight: '400', marginTop: '15%', fontSize: 18 }}>Caretaker</Text>
                 </TouchableOpacity>
             </View>

@@ -17,8 +17,8 @@ const PhoneVarification = ({ navigation }) => {
         <View style={styles.main}>
             {/* logo  */}
             <View style={styles.logo}>
-                <Image source={require('../../assests/images/Logo.jpg')} style={{ width: '100%', height: '40%' }} />
-                <Text style={{ color: 'gray' }}>Add contact details </Text>
+            <Image source={require('../../assests/images/Logo.jpg')} style={{ width: 80, height: '50%' }} />
+        <Text style={{fontWeight:'300',fontSize:16,color:'#92979D'}}>Add email credentials</Text>
             </View>
 
             {/* Inputs */}
@@ -32,6 +32,7 @@ const PhoneVarification = ({ navigation }) => {
                             value={countryCode}
                             onChangeText={handleCountryCodeChange}
                             keyboardType="phone-pad"
+                            maxLength={4}
 
                         />
                         <TextInput

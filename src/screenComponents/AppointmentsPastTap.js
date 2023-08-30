@@ -31,7 +31,7 @@ const AppointmentsPastTap = () => {
     <TouchableOpacity style={styles.mainCardBox} key={item.id}>
       <View style={{ flexDirection: 'row', left: 20, alignItems: 'center' }}>
         <Image source={item.meetingIcon} style={{ width: 100, height: 90, borderRadius: 5 }} />
-        <View style={{ left: 20 }}>
+        <View style={{ left: 10 }}>
           <Text style={{ fontWeight: '600', fontSize: 18 }}>{item.activityHeading}</Text>
           <Text style={{ color: '#9b8878', fontWeight: '600' }}>{item.doctorName} {item.clinicName}</Text>
           <Text style={{ color: '#bbaea2' }}>{item.clinicArea}</Text>
@@ -39,8 +39,8 @@ const AppointmentsPastTap = () => {
 
       </View>
       <View style={styles.mainCardBoxBottom}>
-        <View style={{ flexDirection: 'row', left: 20 }}>
-          <MaterialCommunityIcons name="monitor-eye" size={24} color="black" />
+        <View style={{ flexDirection: 'row', left: 10 }}>
+        <Image source={require('../assests/icons/presention-chart.png')} style={{width:24,height:24}}/>
           <Text style={{ left: 20, color: '#917d6a', fontWeight: '600', fontSize: 16 }}>{item.virtual}</Text>
         </View>
       </View>
